@@ -170,10 +170,6 @@ input:checked + .mem-title .icon {
     font-size: 4vw;
   }
 
-  .container {
-    max-width: 75%;
-  }
-
   .icon {
     opacity: 1;
     visibility: visible;
