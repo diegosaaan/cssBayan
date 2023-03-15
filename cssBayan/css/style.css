@@ -1,0 +1,200 @@
+body {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  line-height: 2rem;
+  font-size: 1.5vw;
+}
+
+h1 {
+  padding: 2% 2%;
+}
+
+h3 {
+  line-height: 2rem;
+}
+
+.container {
+  max-width: 50%;
+  margin: 2em auto;
+  box-shadow: 0rem 0rem 7rem 0rem  darkorange;
+}
+
+.label {
+  display: block;
+  overflow: hidden;
+  border-bottom: 0.1rem solid #1b1a1a;
+  transition: 0.3s;
+}
+
+.first-label {
+  display: block;
+  overflow: hidden;
+  border-top: 0.1rem solid #1b1a1a;
+  transition: 0.3s;
+}
+
+/* img {
+  max-width: 30%;
+  height: 40%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  transition: 0.5s;
+} */
+
+.mem-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 2%;
+  color: blue;
+  transition: 0.3s;
+}
+
+.mem-heading {
+  margin: 0;
+}
+
+.mem-container {
+  display: flex;
+  justify-content: center;
+  max-height: 0;
+  transition: 0.3s;
+}
+
+.input {
+  display: none;
+}
+
+.input:checked + .mem-title {
+  color: rgb(0, 0, 0);
+}
+
+.input:checked + .mem-title + .mem-container {
+  transition: 0.3s;
+  max-height: 100vh;
+}
+
+.icon {
+  padding: 0;
+  width: 5vw;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+input:checked + .mem-title .icon {
+  transform: rotate(45deg);
+}
+
+img {
+  padding-top: 2%;
+  padding-bottom: 2%;
+  width: 30%;
+  height: 30%;
+  transition: 0.5s;
+}
+
+.input:checked ~ .mem-container img {
+  width: 80%;
+  height: 100%;
+  transition: 0.3s;
+}
+
+@media (hover:hover) {
+
+  .label:hover {
+    color: darkorange;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .label:active {
+    opacity: 0.7;
+    cursor: url("../assets/img/cursor.png") 20 10, pointer;
+    transition: 0.3s;
+  }
+
+  .label:active .mem-title .mem-heading {
+    color: blue;
+    transition: 0.3s;
+  }
+
+  .label:hover .icon {
+    transform: rotate(45deg);
+    transition: 0.3s;
+  }
+
+  .label:active .icon path {
+    fill: blue;
+  }
+  
+  .mem-title:hover + .mem-container {
+    max-height: 100vh;
+    transition: 0.3s;
+  }
+
+
+  .container:hover .mem-title {
+    color: #000;
+    /* background-color: #ae8dae; */
+    transition: 0.3s;
+  }
+
+  .container:hover .icon {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+  }
+  
+  .mem-container:hover {
+    transition: 0.3s;
+    max-height: 100vh;
+  }
+
+  .label:hover .mem-container img {
+    width: 80%;
+    height: 100%;
+    transition: 0.5s;
+  }
+
+}
+
+@media (max-width:1180px) {
+
+  body {
+    font-size: 2.5vw;
+  }
+
+  .container {
+    max-width: 75%;
+  }
+
+  img {
+    max-width: 80%;
+  }
+
+  .icon {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+  }
+}
+
+@media (max-width:320px) {
+  
+  body {
+    font-size: 4vw;
+  }
+
+  .icon {
+    opacity: 1;
+    visibility: visible;
+    transition: 0.3s;
+  }
+}
+
